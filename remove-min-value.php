@@ -1,4 +1,3 @@
-<?php
 add_action('admin_footer', 'remove_min_value_inline_script');
 
 function remove_min_value_inline_script() {
@@ -9,7 +8,7 @@ function remove_min_value_inline_script() {
                     if (mutation.addedNodes.length) {
                         mutation.addedNodes.forEach(function(node) {
                             if (node.querySelectorAll) {
-                                node.querySelectorAll("input[min=\'0\']").forEach(function(input) {
+                                node.querySelectorAll(".spacing-sizes-control input[min=\'0\']").forEach(function(input) {
                                     input.removeAttribute("min");
                                 });
                             }
